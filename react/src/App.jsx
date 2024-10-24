@@ -1,4 +1,5 @@
-import './App.css'
+import './css/style.css'
+import './css/contact-form.css'
 
 function App() {
 
