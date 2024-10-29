@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom'; // Importera Link här
+import { Link, NavLink } from 'react-router-dom';
 import Logotype from '../assets/images/images/Silicon-logo.svg';
+import DarkModeSwitch from './DarkModeSwitch';
 
 const Header = () => {
   return (
@@ -15,13 +16,7 @@ const Header = () => {
           <NavLink className="nav-link-2" to="/contacts">Contact</NavLink>
         </nav>
 
-        <div id="darkmode-toggle-switch" className="btn-toggle-switch">
-          <span className="label">Dark mode</span>
-          <label htmlFor="darkmode-switch" className="toggle-switch">
-            <input id="darkmode-switch" type="checkbox" />
-            <span className="slider round"></span>
-          </label>
-        </div>
+        <DarkModeSwitch />
 
         <a id="sign-in" href="#" className="btn-1">
           <i className="fa-thin fa-user fa-bounce" style={{ color: 'white' }}></i>

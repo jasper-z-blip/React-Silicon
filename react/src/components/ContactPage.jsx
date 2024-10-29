@@ -14,7 +14,7 @@ const ContactPage = () => {
 const ContactInfo = () => {
   return (
     <section className="contact-info">
-      <div className="container-2">
+      <div className="contact-container-2">
         <div className="link-box">
           <NavLink iconClass="fa-house" label="Homepage" to="/" />
           <NavLink iconClass="fa-hand-point-right" label="Contact" to="/contact" />
@@ -46,26 +46,30 @@ const ContactInfo = () => {
 const LocationInfo = () => {
   return (
     <section id="find-here">
-      <div className="container-3">
+      <div className="contact-container-3">
         <div className="map">
           <img className="img-map" src={mapImage} alt="Map to find the way." />
           <i className="fa-solid fa-location-dot location-icon"></i>
           <i className="fa-solid fa-location-dot location-icon-2"></i>
         </div>
 
-        <MedicalCenter
-          name="Medical Center 1"
-          address="4517 Washington Ave. Manchester, Kentucky 39495"
-          phone="(406) 555-0120"
-          hours="Mon – Fri: 9:00 am – 10:00 pm Sat – Sun: 9:00 am – 08:00 pm"
-        />
+        <div className="medical-center1">
+          <MedicalCenter
+            name="Medical Center 1"
+            address="4517 Washington Ave. Manchester, Kentucky 39495"
+            phone="(406) 555-0120"
+            hours="Mon – Fri: 9:00 am – 10:00 pm Sat – Sun: 9:00 am – 08:00 pm"
+          />
+        </div>
 
-        <MedicalCenter
-          name="Medical Center 2"
-          address="2464 Royal Ln. Mesa, New Jersey 45463"
-          phone="(406) 544-0123"
-          hours="Mon – Fri: 9:00 am – 10:00 pm Sat – Sun: 9:00 am – 08:00 pm"
-        />
+        <div className="medical-center2">
+          <MedicalCenter
+            name="Medical Center 2"
+            address="2464 Royal Ln. Mesa, New Jersey 45463"
+            phone="(406) 544-0123"
+            hours="Mon – Fri: 9:00 am – 10:00 pm Sat – Sun: 9:00 am – 08:00 pm"
+          />
+        </div>
 
         <SocialMediaLinks />
         <ConsultationForm />

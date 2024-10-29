@@ -32,7 +32,7 @@ const Questions = () => {
         </div>
 
         <div className="box-2">
-          {/* Question 1 */}
+          
           <div className="desktop-tablet-version-1">
             <h3>Is any of my personal information stored in the App?</h3>
             <a href="#" className="more">
@@ -56,7 +56,7 @@ const Questions = () => {
             <p>Ornare senectus fusce dignissim ut. Integer consequat in eu tortor, faucibus et lacinia posuere.</p>
           </div>
 
-          {/* Question 2 */}
+          
           <div className="square">
             <h3>What formats can I download my transaction history in?</h3>
             <a href="#" className="more">
@@ -66,7 +66,7 @@ const Questions = () => {
             </a>
           </div>
 
-          {/* Question 3 */}
+        
           <div className="mobile-version">
             <h3>Can I schedule future transfers?</h3>
             <a href="#" className="more">
@@ -86,7 +86,7 @@ const Questions = () => {
             <p className="lorem">Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus.</p>
           </div>
 
-          {/* Other questions */}
+          
           <div className="square">
             <h3>When can I use Banking App services?</h3>
             <a href="#" className="more">
@@ -134,7 +134,6 @@ const Questions = () => {
             </div>
           </div>
 
-          {/* Contact Button */}
           <div className="button-box">
             <button className="contact-button">Contact us now</button>
           </div>

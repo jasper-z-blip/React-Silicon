@@ -9,7 +9,7 @@ const MakeMoney = () => {
     <section id="make-money">
       <div className="box-4">
         <div className="section-4">
-          {/* First Text Section */}
+          
           <div className="text-1">
             <div>
               <h2>Make your money<br /> transfer simple and clear</h2>
@@ -25,7 +25,6 @@ const MakeMoney = () => {
             </div>
           </div>
 
-          {/* Image Sections */}
           <div className="img-1">
             <div className="img-1-2">
               <img src={FullImage1} alt="A list of contacts." />
@@ -38,7 +37,6 @@ const MakeMoney = () => {
             </div>
           </div>
 
-          {/* Second Text Section */}
           <div className="text-2">
             <h2 className="headline-R">Receive payment from<br /> international bank details</h2>
 

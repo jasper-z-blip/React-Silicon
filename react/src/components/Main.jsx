@@ -11,7 +11,6 @@ import ImageFrontDesktop from '../assets/images//images/image-front-desktop.svg'
 
 const Main = () => {
   return (
-    <main>
       <section id="hero">
         <div className="container">
           <div className="headline">
@@ -61,7 +60,6 @@ const Main = () => {
           </div>
         </div>
       </section>
-    </main>
   );
 };
 
