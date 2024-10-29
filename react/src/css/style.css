@@ -25,9 +25,20 @@
   --color-savetext: #565973;
   --color-savetext2: #565973;
   --color-hamburger: #565973;
-  --custom-gradient-desktop: linear-gradient(0deg, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(241,244,253,0.07) 83%);
-  --custom-gradient: linear-gradient(0deg, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(241,244,253,0.07) 83%);
-  --transition-time: 0.4s;
+  --custom-gradient-2: linear-gradient(180deg, 
+  rgba(255, 255, 255, 1) 0%,
+  rgba(240, 240, 240, 0.85) 10%,
+  rgba(220, 220, 220, 0.5) 20%,
+  rgba(220, 220, 220, 0.5) 25%,
+  rgba(240, 240, 240, 0.85) 30%,
+  rgba(255, 255, 255, 1) 40%,
+  rgba(240, 240, 240, 0.85) 46%,
+  rgba(230, 230, 230, 0.85) 50%, 
+  rgba(200, 200, 200, 0.5) 60%,
+  rgba(240, 240, 240, 0.85) 89%,
+  rgba(255, 255, 255, 1) 100%  
+);
+
 }
 
   /* Dark-mode */
@@ -53,9 +64,21 @@
   --color-dwhite: #1A1A1A;
   --color-black: #00000000;
   --color-text: #585C7B;
-  --color-savetext: #33354D;
+  --color-savetext: #2d2e31;
   --color-savetext2: #FFFFFF;
   --color-hamburger: #FFFFFF;
+  --custom-gradient-2: linear-gradient(180deg, 
+  rgba(0, 0, 0, 1) 0%, 
+  rgba(30, 30, 30, 0.85) 10%, 
+  rgba(60, 60, 60, 0.6) 20%, 
+  rgba(60, 60, 60, 0.6) 25%,
+  rgba(30, 30, 30, 0.85) 30%, 
+  rgba(0, 0, 0, 1) 40%, 
+  rgba(30, 30, 30, 0.85) 46%, 
+  rgba(40, 40, 40, 0.85) 50%, 
+  rgba(80, 80, 80, 0.6) 60%,
+  rgba(30, 30, 30, 0.85) 89%, 
+  rgba(0, 0, 0, 1) 100%);
   --custom-gradient-desktop: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(30, 30, 30, 0.85) 50%, rgba(60, 60, 60, 0.6) 100%);
   --custom-gradient: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(50, 50, 50, 1) 20%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0.5) 60%, rgba(50, 50, 50, 1) 80%, rgba(0, 0, 0, 1) 100%);
   --transition-time: 0.4s;
@@ -106,7 +129,7 @@ body {
 
 /* HEADER */
 header .container {
-  max-width: 100vw;
+  max-width: 100%;
   padding-top: 0.5rem;
   padding-left: 2rem;
   margin-left: auto;
@@ -179,10 +202,15 @@ a:hover {
   margin-right: 1.5rem;
 }
 
+
 .btn-toggle-switch {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.btn-toggle-switch .label {
+  display: none;
 }
 
 .toggle-switch {
@@ -194,11 +222,22 @@ a:hover {
 
 .toggle-switch input {
   opacity: 0;
-  width: 0;
-  height: 0;
 }
 
-.slider {
+.toggle-switch input:checked + .slider {
+  background-color: var(--color-purple);
+}
+
+.toggle-switch input:focus + .slider {
+  box-shadow: 0 0 1px var(--color-purple);
+}
+
+.toggle-switch input:checked + .slider:before {
+  transform: translateX(18px);
+  background-color: var(--color-white);
+}
+
+.toggle-switch .slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -206,11 +245,9 @@ a:hover {
   right: 0;
   bottom: 0;
   background-color: var(--color-grey600);
-  transition: background-color 0.4s ease;
-  border-radius: 25px;
 }
 
-.slider:before {
+.toggle-switch .slider:before {
   position: absolute;
   content: "";
   height: 20px;
@@ -218,17 +255,17 @@ a:hover {
   left: 4px;
   bottom: 2.5px;
   background-color: var(--color-white);
-  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, background-color 0.4s ease;
+}
+
+.toggle-switch .slider.round {
+  border-radius: 35px;
+}
+
+.toggle-switch .slider.round:before {
   border-radius: 50%;
 }
 
-input:checked + .slider {
-  background-color: var(--color-purple);
-}
-
-input:checked + .slider:before {
-  transform: translateX(20px);
-}
 
 .in-up {
   color: var(--color-white);
@@ -241,7 +278,7 @@ input:checked + .slider:before {
 
 /* MAIN */
 #hero {
-  background: var(--custom-gradient);
+  background: var(--custom-gradient-2);
 }
 #hero .container {
   padding: 0;
@@ -255,6 +292,7 @@ input:checked + .slider:before {
   text-align: center;
 }
 #hero .headline h1 {
+  color: var(--color-grey900);
   font-size: 2.5rem;
   font-weight: 800;
 }
@@ -273,9 +311,6 @@ input:checked + .slider:before {
 }
 #hero .buttons-desktop, .buttons-desktop-dark {
   display: none;
-}
-#hero .save-text {
-  color: var(--color-savetext);
 }
 #hero .disc-more {
   color: var(--color-chevron);
@@ -359,7 +394,7 @@ input:checked + .slider:before {
   padding-bottom: 1rem;
 }
 
-.section-2 { /* Modifierad ChatGPT kod, hjälp med flex */
+.section-2 {
   display: grid;
 }
 
@@ -641,7 +676,6 @@ h2 {
 }
 
 .yellow-bell h2 {
-  color: var(--color-grey800);
   font-size: 1.5rem;
   margin: 0;
   font-weight: 800;
@@ -691,6 +725,12 @@ h2 {
   background-color: var(--color-purple);
 }
 
+.error-message {
+  color: red;
+  margin-left:  1rem;
+}
+
+
 /* FOOTER */
 footer {
   background-color: var(--color-white);
@@ -699,6 +739,7 @@ footer {
 }
 
 footer .container {
+  margin-top: 2rem;
   height: auto;
   color: var(--color-grey600);
   font-size: 1rem;
@@ -710,7 +751,7 @@ footer .container {
 }
 
 /* TABLET-LÄGE */
-@media (min-width: 768px) { /* Ändra i tablet-läge */
+@media (min-width: 768px) {
   /* Header */
   .header .container {
     width: 728px;

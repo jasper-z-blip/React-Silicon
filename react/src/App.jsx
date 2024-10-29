@@ -7,14 +7,12 @@ import Features from './pages/Features'
 
 import Header from './components/Header'
 import Footer from './components/Footer'
-import DarkModeSwitch from './components/DarkModeSwitch'
 
 
 function App() {
 
   return (
     <BrowserRouter>
-      <DarkModeSwitch />
       <div className='wrapper'>
         <Header />
         <main>

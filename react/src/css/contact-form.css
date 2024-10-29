@@ -1,5 +1,5 @@
 @charset "UTF-8";
-:root {
+:root[data-theme="light"]{
   /* Light-mode */
   --color-grey100: #F3F6FF;
   --color-grey200: #EFF2FC;
@@ -21,6 +21,7 @@
   --color-white: #FFFFFF;
   --color-box-white: #FFFFFF;
   --color-dwhite: #F2F2F2;
+  --color-floating-box-white: #FFFFFF;
   --color-black: #00000000;
   --color-text: #585C7B;
   --color-savetext: #565973;
@@ -34,7 +35,7 @@
 }
 
   /* Dark-mode */
-body.dark-mode {
+:root[data-theme="dark"]{
   --color-grey100: #131022;
   --color-grey200: #FFFFFF0A;
   --color-grey300: #E2E5F1;
@@ -54,6 +55,7 @@ body.dark-mode {
   --color-white: #000000;
   --color-box-white: #131022;
   --color-dwhite: #1A1A1A;
+  --color-floating-box-white: #292a30;
   --color-black: #00000000;
   --color-text: #585C7B;
   --color-savetext: #33354D;
@@ -82,6 +84,7 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   font-size: 16px;
+  background-color: var(--color-white);
   color: var(--color-grey700);
   
   h1, h2, h3 {
@@ -188,6 +191,9 @@ body {
 }
 
 /* MAP & MEDICAL */
+#find-here {
+  background-color: var(--color-white);
+}
 .map {
   grid-area: map;
   position: relative;
@@ -272,11 +278,11 @@ body {
 
 /* Floating box */
 .floating-box {
+  background-color: var(--color-floating-box-white);
   width: 90vw;
   height: 100vw;
   padding: 2rem;
   gap: .5rem;
-  background-color: white;
   box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
   margin-left: 3rem;
