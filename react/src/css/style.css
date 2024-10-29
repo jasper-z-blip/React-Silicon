@@ -636,7 +636,7 @@ h2 {
   transform: scale(1.1);
 }
 
-/* SECTION-7 */ /* Hjälp av chat GPT och Joakims video */
+/* SECTION-7 */
 #subscribe {
   background-color: var(--color-white);
   padding-left: 0.5rem;
@@ -654,7 +654,7 @@ h2 {
 .section-7 {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 }
 

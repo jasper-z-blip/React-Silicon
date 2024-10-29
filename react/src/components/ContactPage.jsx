@@ -145,11 +145,11 @@ const ConsultationForm = () => {
   return (
     <div className="floating-box">
       <h2>Get Online Consultation</h2>
-      <p>Full name</p>
+      <p className='enter-paragraph'>Full name</p>
       <input type="text" className="input-name" placeholder="Enter your name" />
-      <p>Email address</p>
+      <p className='enter-paragraph'>Email address</p>
       <input type="email" className="input-email" placeholder="Enter your email" />
-      <p>Specialist</p>
+      <p className='enter-paragraph'>Specialist</p>
       <input type="text" className="input-spec" placeholder="Specialist's name" />
       <button className="btn-make">Make an appointment</button>
     </div>
