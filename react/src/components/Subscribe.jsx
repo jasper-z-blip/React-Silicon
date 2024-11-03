@@ -5,21 +5,38 @@ const Subscribe = () => {
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const handleSubscribe = (event) => {
     event.preventDefault();
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; //Hjälp av chatGPT med att veta hur man skulle kunna validera att det är en emailadress.
 
-    if (!emailRegex.test(email)) {
-      setError('Enter a valid email address.');
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (email === '') {
+      setError('Please enter your email address.');
       setIsSubscribed(false);
-    } else {
+      return;
+    } else if (emailRegex.test(email)) {
       setError('');
       console.log("Subscribed with email:", email);
       setEmail('');
       setIsSubscribed(true);
+      setSubmitted(true);
+    } else {
+      setError('Enter a valid email.');
+      setIsSubscribed(false);
     }
   };
+
+  if (submitted) {
+    return (
+      <div className="subsbox">
+        <h1>Thank you for subscribing!</h1>
+        <p>Check your email for more information.</p>
+        <button className="ok-btn" onClick={() => setSubmitted(false)}>OK</button>
+      </div>
+    );
+  }
 
   return (
     <section id="subscribe">
