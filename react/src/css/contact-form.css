@@ -286,7 +286,7 @@ body {
 .floating-box {
   background-color: var(--color-floating-box-white);
   width: 400px;
-  height: 100vw;
+  height: 600px;
   padding: 2rem;
   gap: .5rem;
   box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
@@ -300,18 +300,19 @@ body {
 
   .enter-paragraph {
     color: var(--color-grey900);
-    font-size: 10px;
+    font-size: 14px;
     font-weight: bold;
+    text-align: left;
   }
 }
 
-.input-name, .input-email, .input-spec {
-  background-color: var(--color-white);
-  margin-bottom: 1rem;
-  border: 1px solid var(--color-grey400);
+input[type="text"], input[type="email"] {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: .5rem;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  height: 3rem;
-  width: 22rem;
+  font-size: 16px;
 }
 
 .btn-make {
@@ -327,6 +328,31 @@ body {
 
 .btn-make:hover {
   background-color: var(--color-purple);
+}
+
+
+.contact-box {
+  text-align: center;
+  border-radius: 5px;
+
+  background-color: var(--color-grey800);
+  padding: 1rem;
+
+  h1 {
+    font-size: 40px;
+  }
+
+  p {
+    font-size: 24px;
+  }
+
+  .ok-btn {
+    background-color: #0b4721;
+    color: white;
+    height: 35px;
+    width: 40px;
+    margin-top: 1rem;
+  }
 }
 
 @media (min-width: 1400px) {
@@ -498,12 +524,10 @@ body {
     top: 8rem;
     right: 13rem;
   }
-  
-  .input-name, .input-email, .input-spec {
-    width: 28rem;
-  }
 
-  .enter-paragraph {
-    text-align: left;
+  .contact-box {
+    position: absolute;
+    top: 20rem;
+    right: 13rem;
   }
 }

@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import mapImage from '../assets/images/images/map.svg';
+import axios from 'axios';
+import {useForm} from 'react-hook-form';
+import {useState} from 'react';
 
 const ContactPage = () => {
   return (
@@ -142,17 +145,68 @@ const SocialMediaLinks = () => {
 };
 
 const ConsultationForm = () => {
+  const [submitted, setSubmitted] = useState(false);
+  const { register, handleSubmit, formState: { errors }, reset } = useForm();
+
+  const handleOk = () => {
+    setSubmitted(false);
+    reset();
+  };
+
+  const onSubmit = async (data) => {
+    try {
+      const res = await axios.post('https://jsonplaceholder.typicode.com/posts', data);
+      if (res.status === 201) {
+        setSubmitted(true);
+        reset();
+      }
+    } catch (error) {
+      console.error("Error submitting form: ", error);
+      alert("The form could not be submitted. Please try again later.");
+    }
+  };
+
+  if (submitted) {
+    return (
+      <div className="contact-box">
+        <h1>Thank you for your message! </h1>
+        <p>We will get back to you as soon as possible.</p>
+        <button className="ok-btn" onClick={handleOk}>OK</button>
+      </div>
+    );
+  }
+
   return (
-    <div className="floating-box">
-      <h2>Get Online Consultation</h2>
-      <p className='enter-paragraph'>Full name</p>
-      <input type="text" className="input-name" placeholder="Enter your name" />
-      <p className='enter-paragraph'>Email address</p>
-      <input type="email" className="input-email" placeholder="Enter your email" />
-      <p className='enter-paragraph'>Specialist</p>
-      <input type="text" className="input-spec" placeholder="Specialist's name" />
-      <button className="btn-make">Make an appointment</button>
-    </div>
+    <form onSubmit={handleSubmit(onSubmit)} noValidate>
+      <div className="floating-box">
+        <h2>Get online consultation</h2>
+        <p className='enter-paragraph'>Full name</p>
+        <input 
+          type="text" 
+          placeholder="Full name" 
+          {...register('name', { required: 'This field is required.' })} 
+        />
+        {errors.name && <p className="error-message">{errors.name.message}</p>}
+        
+        <p className='enter-paragraph'>E-mail</p>
+        <input 
+          type="email" 
+          placeholder="E-mail" 
+          {...register('email', { required: 'This field is required.' })} 
+        />
+        {errors.email && <p className="error-message">{errors.email.message}</p>}
+        
+        <p className='enter-paragraph'>Specialist</p>
+        <input 
+          type="text" 
+          placeholder="Specialist" 
+          {...register('specialist', { required: 'This field is required.' })} 
+        />
+        {errors.specialist && <p className="error-message">{errors.specialist.message}</p>}
+        
+        <button type="submit" className="btn-make">Book an appointment</button>
+      </div>
+    </form>
   );
 };
 
