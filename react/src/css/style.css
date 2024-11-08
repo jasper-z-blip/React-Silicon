@@ -648,12 +648,9 @@ h2 {
 .input-box {
   display: flex;
   align-items: center;
-}
-
-.input-container {
-  position: relative;
-  width: 100%;
-  border-top-right-radius: 0;;
+  text-align: center;
+  border-right: none;
+  border-top-left-radius: .5px;
 }
 
 .input-container i {
@@ -668,9 +665,8 @@ h2 {
   width: 100%;
   padding: 1rem 1rem 1rem 2rem;
   border: 2px solid var(--color-grey300);
-  border-top-left-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
   font-size: 1rem;
+  border-top-left-radius: .5px;
 }
 
 .btn-4 {

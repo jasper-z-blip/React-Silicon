@@ -59,24 +59,21 @@ const Subscribe = () => {
             <h2>Subscribe to<br /> our newsletter!</h2>
           </div>
 
-          <div className="input-box">
-            <form onSubmit={handleSubscribe}>
-              <div className="input-container">
-                <i className="fa-regular fa-envelope"></i>
-                <input 
-                  className="mail-box" 
-                  type="email" 
-                  placeholder="Your email" 
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </div>
+          <form onSubmit={handleSubscribe}>
+            <div className="input-box">
+              <input 
+                className="mail-box" 
+                type="email" 
+                placeholder="Your email" 
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
               <button className="btn-4" type="submit" disabled={isLoading}>
                 {isLoading ? 'Subscribing...' : isSubscribed ? 'Subscribed' : 'Subscribe'}
               </button>
-            </form>
+            </div>
             {error && <p id="email-error" className="error-message">{error}</p>}
-          </div>
+          </form>
         </div>
       </div>
     </section>

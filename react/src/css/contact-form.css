@@ -306,7 +306,7 @@ body {
   }
 }
 
-input[type="text"], input[type="email"] {
+.name-input, .email-input, .spec-input {
   width: 100%;
   padding: 1rem;
   margin-bottom: .5rem;

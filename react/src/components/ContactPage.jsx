@@ -181,7 +181,7 @@ const ConsultationForm = () => {
       <div className="floating-box">
         <h2>Get online consultation</h2>
         <p className='enter-paragraph'>Full name</p>
-        <input 
+        <input className='name-input'
           type="text" 
           placeholder="Full name" 
           {...register('name', { required: 'This field is required.' })} 
@@ -189,7 +189,7 @@ const ConsultationForm = () => {
         {errors.name && <p className="error-message">{errors.name.message}</p>}
         
         <p className='enter-paragraph'>E-mail</p>
-        <input 
+        <input className='email-input' 
           type="email" 
           placeholder="E-mail" 
           {...register('email', { required: 'This field is required.' })} 
@@ -197,7 +197,7 @@ const ConsultationForm = () => {
         {errors.email && <p className="error-message">{errors.email.message}</p>}
         
         <p className='enter-paragraph'>Specialist</p>
-        <input 
+        <input className='spec-input'
           type="text" 
           placeholder="Specialist" 
           {...register('specialist', { required: 'This field is required.' })} 

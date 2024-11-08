@@ -13,11 +13,11 @@ const Questions = () => {
     },
     {
       question: "What formats can I download my transaction history in?",
-      answer: "The available formats for downloading transaction history vary, depending on the application or banks specific offerings.",
+      answer: "The available formats for downloading transaction history can vary, depending on the application or banks specific offerings.",
     },
     {
       question: "Can I schedule future transfers?",
-      answer: "Yes, that's possible.",
+      answer: "Yes, it is possible. Log in to your account and go to Transfers. Then you can choose when you want your transfer to be pulled.",
     },
     {
       question: "When can I use Banking App services?",
