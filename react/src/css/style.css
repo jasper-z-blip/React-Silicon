@@ -536,20 +536,27 @@ h2 {
   padding: 1rem;
 }
 
-.faq-item, .question-row {
+.faq-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-align: left;
+  font-size: .7rem;
   border: 2px solid var(--color-grey200);
   padding: .5rem;
   margin-top: .5rem;
+}
+
+.question-row {
+  display: flex;
 }
 
 .btn-circle {
   background-color: var(--color-grey200);
   border-radius: 50%;
   font-size: 1rem;
-  padding: 1rem;
+  padding: .5rem;
+  margin-left: auto;
 }
 
 .faq-item.active .btn-circle {
@@ -558,6 +565,11 @@ h2 {
 
 .faq-item.active .fa-chevron-up {
   color: #ffffff;
+}
+
+.faq-item.active {
+  display: grid;
+  grid-template-rows: 2fr;
 }
 
 .phoneandbubble {
@@ -580,7 +592,6 @@ h2 {
   color: white;
   margin-top: 1rem;
 }
-
 
 /* SECTION-7 */
 #subscribe {
