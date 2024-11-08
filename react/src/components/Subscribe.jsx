@@ -6,6 +6,7 @@ const Subscribe = () => {
   const [error, setError] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubscribe = (event) => {
     event.preventDefault();
@@ -16,16 +17,22 @@ const Subscribe = () => {
       setError('Please enter your email address.');
       setIsSubscribed(false);
       return;
-    } else if (emailRegex.test(email)) {
-      setError('');
-      console.log("Subscribed with email:", email);
+    } else if (!emailRegex.test(email)) {
+      setError('Please enter a valid email address.');
+      setIsSubscribed(false);
+      return;
+    }
+
+    setIsLoading(true);
+    setError('');
+    console.log("Subscribed with email:", email);
+
+    setTimeout(() => {
       setEmail('');
       setIsSubscribed(true);
       setSubmitted(true);
-    } else {
-      setError('Enter a valid email.');
-      setIsSubscribed(false);
-    }
+      setIsLoading(false);
+    }, 2000); // Simulate an API call delay
   };
 
   if (submitted) {
@@ -53,20 +60,22 @@ const Subscribe = () => {
           </div>
 
           <div className="input-box">
-            <div className="input-container">
-              <i className="fa-regular fa-envelope"></i>
-              <input 
-                className="mail-box" 
-                type="email" 
-                placeholder="Your email" 
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </div>
-            <button className="btn-4" onClick={handleSubscribe}>
-              {isSubscribed ? 'Subscribed' : 'Subscribe'}
-            </button>
-            {error && <p className="error-message">{error}</p>}
+            <form onSubmit={handleSubscribe}>
+              <div className="input-container">
+                <i className="fa-regular fa-envelope"></i>
+                <input 
+                  className="mail-box" 
+                  type="email" 
+                  placeholder="Your email" 
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+              <button className="btn-4" type="submit" disabled={isLoading}>
+                {isLoading ? 'Subscribing...' : isSubscribed ? 'Subscribed' : 'Subscribe'}
+              </button>
+            </form>
+            {error && <p id="email-error" className="error-message">{error}</p>}
           </div>
         </div>
       </div>

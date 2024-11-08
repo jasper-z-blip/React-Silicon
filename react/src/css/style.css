@@ -528,113 +528,59 @@ h2 {
 }
 
 /* SECTION-6 */
-#questions {
-  background-color: var(--color-white);
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-#questions .desktop-piece, #questions .desktop-tablet-version-1, #questions .desktop-tablet-version-2, #questions .tablet-piece, #questions .paragraph-tablet {
-  display: none;
-}
-
-.section-6 .box-1 {
+.section-6 {
+  padding: 1rem;
   text-align: center;
 }
-
-.box-1 p {
-  padding-bottom: 3rem;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
-.mobile-version, .mobile-version-1, .mobile-version-text, .square, .square-1 {
-  border: 1.5px solid #E2E5F1;
-  background-color: var(--color-box-white);
-}
-.mobile-version p, .mobile-version-1 p, .mobile-version-text p, .square p, .square-1 p {
+.box-1 {
   padding: 1rem;
 }
 
-.mobile-version .btn-circle-1, .mobile-version-1 .btn-circle-1 {
+.faq-item, .question-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid var(--color-grey200);
+  padding: .5rem;
+  margin-top: .5rem;
+}
+
+.btn-circle {
+  background-color: var(--color-grey200);
+  border-radius: 50%;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.faq-item.active .btn-circle {
   background-color: var(--color-primary);
 }
 
-.btn-circle, .btn-circle-1 {
-  background-color: var(--color-grey200);
-  border-radius: 50%;
-  width: 2.8rem;
-  height: 2.8rem;
+.faq-item.active .fa-chevron-up {
+  color: #ffffff;
+}
+
+.phoneandbubble {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content:space-around;
 }
 
-.mobile-version, .mobile-version-1, .square, .square-1 {
-  display: flex;
-  align-items: center;
-  text-align: left;
-  justify-content: center;
-  gap: 4rem;
-  padding-left: 1rem;
-  padding-right: 2rem;
-  height: 7rem;
-}
-.mobile-version h3, .mobile-version-1 h3, .square h3, .square-1 h3 {
-  padding-top: 1.5rem;
-}
-
-.mobile-version-1 {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-bottom: none;
-}
-
-.mobile-version .more {
-  padding-left: 2rem;
-}
-
-.square, .square-1, .mobile-version {
-  border-top: none;
-}
-
-.square-1 {
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-.can-i {
-  grid-area: can-i;
-}
-
-.lorem {
-  grid-area: lorem;
-}
-
-.button-box {
-  padding-top: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.contact-option {
+  border: 2px solid var(--color-grey200);
+  margin-top: 1rem;
+  padding: 1rem;
 }
 
 .contact-button {
   background-color: var(--color-primary);
-  color: #fff;
   border: none;
   padding: 1rem;
-  text-align: center;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 0.5rem;
+  border-radius: 8px;
+  width: 200px;
+  color: white;
   margin-top: 1rem;
 }
 
-.contact-button:hover {
-  background-color: var(--color-purple);
-  transform: scale(1.1);
-}
 
 /* SECTION-7 */
 #subscribe {
@@ -690,7 +636,8 @@ h2 {
 
 .input-container {
   position: relative;
-  width: 250px;
+  width: 100%;
+  border-top-right-radius: 0;;
 }
 
 .input-container i {
@@ -877,118 +824,7 @@ footer .container {
     height: fit-content;
   }
   /* SECTION 6 */
-  #questions {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  #questions .tablet-piece, #questions .desktop-tablet-version-1, #questions .desktop-tablet-version-2, #questions .paragraph-tablet, #questions .square {
-    display: block;
-    margin-bottom: 1rem;
-    border: none;
-  }
-  #questions .desktop-tablet-version-1, #questions .desktop-tablet-version-2, #questions .paragraph-tablet, #questions .square {
-    background-color: var(--color-box-white);
-  }
-  #questions .mobile-version, #questions .mobile-version-1, #questions .mobile-version-text, #questions .contact-button, #questions .desktop-piece {
-    display: none;
-  }
-  #questions .section-6 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  #questions .section-6 .desktop-tablet-version-1, #questions .section-6 .square, #questions .section-6 .square-1 .square-2, #questions .section-6 .square-3 {
-    display: flex;
-    text-align: left;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  #questions .section-6 h2 {
-    font-weight: 900;
-  }
-  #questions .section-6 .desktop-tablet-version-1 {
-    padding-right: 2rem;
-    padding-left: 1rem;
-    padding-top: 1rem;
-  }
-  #questions .desktop-tablet-version-2 {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-areas: "can-i" "lorem";
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 1rem;
-    padding-right: 2rem;
-    padding-bottom: 2rem;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  #questions .desktop-tablet-version-2 .btn-circle-1 {
-    background-color: var(--color-primary);
-  }
-  #questions .desktop-tablet-version-2 h3 {
-    padding-top: 1.5rem;
-  }
-  #questions .desktop-tablet-version-2 .lorem {
-    color: var(--color-grey700);
-  }
-  #questions .square-1 {
-    justify-content: space-between;
-    border-top: 2px solid #E2E5F1;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  #questions .tablet-piece {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-  }
-  #questions .square-2, #questions .square-3 {
-    flex: 1;
-    text-align: center;
-    margin-right: 1rem;
-    padding-bottom: 1rem;
-    border: 2px solid var(--color-grey300);
-    border-radius: 7px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    gap: 1rem;
-  }
-  #questions .square-2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
-  #questions .square-2 img {
-    padding-top: 1rem;
-  }
-  #questions .square-3 {
-    margin-right: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  #questions .square-3 img {
-    padding-top: 1rem;
-  }
-  #contact-1 i {
-    margin-left: 0.5rem;
-    color: var(--color-primary);
-  }
-  #contact-1 span {
-    color: var(--color-primary);
-  }
-  #contact-2 i {
-    margin-left: 0.5rem;
-    color: var(--color-success);
-  }
-  #contact-2 span {
-    color: var(--color-success);
-  }
+
   /* SECTION-7 */
   #subscribe {
     padding-top: 0;
@@ -1287,73 +1123,20 @@ footer .container {
     }
   }
   /* SECTION-6 */
-  #questions .tablet-piece {
-    display: none;
-  }
+  
   #questions .section-6 {
     width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: auto 2fr; /* Två kolumner, där box-2 tar större plats */
+    grid-template-columns: auto 2fr;
     -moz-column-gap: 0.5rem;
          column-gap: 0.5rem;
   }
-  #questions .box-1 {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-  }
+
   #questions .box-1 h2 {
     text-align: left;
   }
-  #questions .box-1 p {
-    text-align: left;
-    padding-left: 0;
-    margin: 0;
-  }
-  #questions .desktop-piece {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 2rem;
-  }
-  #questions .desktop-piece .square-4, #questions .desktop-piece .square-5 {
-    margin-right: 1rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 1rem;
-    text-align: left;
-    justify-content: left;
-    color: var(--color-dwhite);
-    border: 2px solid var(--color-grey300);
-    border-radius: 7px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    gap: 1rem;
-  }
-  #questions .desktop-piece .square-4 p, #questions .desktop-piece .square-5 p {
-    margin: 0;
-    padding-bottom: 3rem;
-    padding-top: 1rem;
-    font-size: 14px;
-  }
-  #questions .box-2 {
-    display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(auto, 1fr)); /* hjälp från chatGPT med denna kod */
-    padding-top: 1rem;
-    padding-left: 3rem;
-    font-size: 0.9rem;
-  }
-  #questions #contact-4 i {
-    color: var(--color-primary);
-  }
-  #questions #contact-4 span {
-    color: var(--color-primary);
-  }
-  #questions #contact-5 i {
-    color: var(--color-success);
-  }
-  #questions #contact-5 span {
-    color: var(--color-success);
-  }
+
   /* SECTION-7 */
   #subscribe .yellow-bell-2 {
     display: flex;
