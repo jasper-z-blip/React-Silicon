@@ -5,8 +5,7 @@ import WhiteAppStore from '../assets/images/images/white-appstore.svg';
 import WhiteGooglePlay from '../assets/images/images/white-google.svg';
 import AppStoreDesktopDark from '../assets/images/images/appstore-desktop-dark.svg';
 import GooglePlayDesktopDark from '../assets/images/images/googleplay-desktop-dark.svg';
-import MobileFront from '../assets/images/images/mobile-front.svg';
-import MobileBack from '../assets/images/images/mobile-back.svg';
+import TwoPhones from '../assets/images/images/two-phones.svg';
 import ImageFrontDesktop from '../assets/images//images/image-front-desktop.svg';
 
 const Main = () => {
@@ -28,21 +27,6 @@ const Main = () => {
               <a className="btn-app" href="#"><img src={GooglePlay} alt="Google-play button" /></a>
             </div>
 
-            <div className="buttons-dark" style={{ display: 'none' }}>
-              <img className="btn-app-2" src={WhiteAppStore} alt="App-store button" />
-              <img className="btn-app-2" src={WhiteGooglePlay} alt="Google-play button" />
-            </div>
-
-            <div className="buttons-desktop">
-              <a className="btn-app-3" href="#"><img src={AppStoreDesktopDark} alt="App-store button" /></a>
-              <a className="btn-app-3" href="#"><img src={GooglePlayDesktopDark} alt="Google-play button" /></a>
-            </div>
-
-            <div className="buttons-desktop-dark" style={{ display: 'none' }}>
-              <img className="btn-app-4" src={AppStoreDesktopDark} alt="App-store button" />
-              <img className="btn-app-4" src={GooglePlayDesktopDark} alt="Google-play button" />
-            </div>
-
             <div className="all-discover">
               <a href="#" className="discover-more">
                 <span className="btn-circle">
@@ -54,9 +38,7 @@ const Main = () => {
           </div>
 
           <div className="images">
-            <img className="img-front-desktop" src={ImageFrontDesktop} alt="Mobilephone showing transactions" />
-            <img className="img-front" src={MobileFront} alt="Mobilephone showing transactions" />
-            <img className="img-back" src={MobileBack} alt="Mobilephone showing budget" />
+            <img className="two-phones" src={TwoPhones} alt="Mobilephones showing transactions" />
           </div>
         </div>
       </section>
