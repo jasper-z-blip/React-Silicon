@@ -1,5 +1,5 @@
 import React from 'react';
-import AppStore from '../assets/images/images/App-Store.svg'; // Adjust the path as per your project structure
+import AppStore from '../assets/images/images/App-Store.svg';
 import GooglePlay from '../assets/images/images/Google-Play.svg';
 import TwoPhones from '../assets/images/images/two-phones.svg';
 
@@ -32,6 +32,7 @@ const Main = () => {
               </a>
             </div>
           </div>
+
 
           <div className="images">
             <img className="two-phones" src={TwoPhones} alt="Mobilephones showing transactions" />

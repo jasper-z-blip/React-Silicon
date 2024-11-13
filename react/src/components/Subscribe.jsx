@@ -27,12 +27,12 @@ const Subscribe = () => {
     setError('');
     console.log("Subscribed with email:", email);
 
-    setTimeout(() => {
+    setTimeout(() => { //Hjälp av chatGPT
       setEmail('');
       setIsSubscribed(true);
       setSubmitted(true);
       setIsLoading(false);
-    }, 2000); // Simulate an API call delay
+    }, 2000);
   };
 
   if (submitted) {
