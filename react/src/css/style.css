@@ -447,6 +447,10 @@ h2 {
   padding: 1rem;
 }
 
+.faq-list {
+  margin: 2rem 2rem 2rem 2rem;
+}
+
 .faq-item {
   display: flex;
   justify-content: space-between;
@@ -454,8 +458,12 @@ h2 {
   text-align: left;
   font-size: .7rem;
   border: 2px solid var(--color-grey200);
-  padding: .5rem;
-  margin-top: .5rem;
+  padding-left: 1rem;
+  padding-right: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: .5rem;
+  border-radius: 5px;
 }
 
 .question-row {
@@ -730,6 +738,10 @@ footer .container {
     height: fit-content;
   }
   /* SECTION 6 */
+  .faq-item {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border: none;
+  }
 
   /* SECTION-7 */
   #subscribe {
@@ -760,13 +772,14 @@ footer .container {
     padding-right: 0.3rem;
   }
 }
+
 /* DESKTOP-LÄGE */
 @media (min-width: 1400px) {
   /* Header */
   header .container {
-    width: 1250px;
+    max-width: 1250px;
     padding-right: 4rem;
-    grid-template-columns: auto auto 1fr auto auto;
+    grid-template-columns: auto 1fr auto auto auto;
     gap: 2.5rem;
   }
   .mobile-menu {
@@ -785,7 +798,9 @@ footer .container {
     margin-right: 8px;
   }
   /* MAIN */
-  
+  #hero .container {
+    max-width: 1300px;
+  }
 
   /* SECTION-1 */
   #brands .section-1 {
@@ -916,57 +931,62 @@ footer .container {
   #learn-2.btn-3 {
    padding-bottom: 0;
   }
+
   /* SECTION-5 */
   #clients {
     display: block;
-  }
-  .rew-light {
-    display: block;
-  }
-  .rew-dark {
-    display: none;
-  }
-  .section-5 {
-    background-color: var(--color-grey100);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
+    background-color: var(--color-grey100);
+    padding: 2rem 2rem;
   }
+  
   .our-app {
     font-weight: 900;
     font-size: 1.2rem;
     color: var(--color-grey900);
-    margin-right: 3rem;
-    margin-left: 3rem;
-    padding-bottom: 15rem;
+    margin: 2rem 14rem 0rem 8rem;
   }
-  .summers, .flores {
-    padding-top: 4rem;
-    padding-bottom: 3rem;
-  }
-  .rew-light {
+
+  .reviews {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }  
-  body.dark-mode {
-    .section-5 {
-      padding-top: 3rem;
-      padding-bottom: 3rem;
-    }
-    .rew-light {
-        display: none;
-    }
-    .rew-dark {
-      display: block;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
+    flex-direction: row;
+  }
+  
+  .review-1, .review-2 {
+    height: 20rem;
+    width: 20rem;
+    background-color: var(--color-white);
+    margin: 2rem 2rem 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding-left: 1.5rem;
+    padding-right: 1rem;
+
+    p {
+      margin-top: 1rem;
     }
   }
+
+  .img-name-1, .img-name-2 {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .test-text {
+    padding: 1rem 2rem 2rem 1rem;
+
+    h3 {
+      margin-bottom: -.5rem;
+    }
+  }
+
+  .citattecken-1, .citattecken-2 {
+    margin-top: -2rem;
+  }
+
   /* SECTION-6 */
-  
   #questions .section-6 {
     width: 1200px;
     margin: 0 auto;

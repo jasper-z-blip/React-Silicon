@@ -1,12 +1,8 @@
 import React from 'react';
 import AppStore from '../assets/images/images/App-Store.svg'; // Adjust the path as per your project structure
 import GooglePlay from '../assets/images/images/Google-Play.svg';
-import WhiteAppStore from '../assets/images/images/white-appstore.svg';
-import WhiteGooglePlay from '../assets/images/images/white-google.svg';
-import AppStoreDesktopDark from '../assets/images/images/appstore-desktop-dark.svg';
-import GooglePlayDesktopDark from '../assets/images/images/googleplay-desktop-dark.svg';
 import TwoPhones from '../assets/images/images/two-phones.svg';
-import ImageFrontDesktop from '../assets/images//images/image-front-desktop.svg';
+
 
 const Main = () => {
   return (
