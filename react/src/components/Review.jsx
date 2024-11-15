@@ -1,26 +1,25 @@
-import React from 'react'
-import StarRating from './StarRating'
+import React from 'react';
+import StarRating from './StarRating';
 import QuotesBluebox from '../assets/images/images/quotes-bluebox.svg';
 
-const Review = ({item}) => {
+const Review = ({ starRating, author, jobRole, avatarUrl, comment }) => {
   return (
-    <div className="reviews">
-        <div className='citattecken-1'>
+
+    <div className="review">
+      <div className='quote'>
           <img src={QuotesBluebox} alt="Quotes in a blubox" />
-        </div>
-        
-        <StarRating StarRating={item.starRating} />
+      </div>
+      <div className="review-details">
+        <StarRating starRating={starRating} />
+        <p className="comment">{comment}</p>
 
-        <p>{item.comment}</p>
-        <div className='img-name-1'>
-          <img src={item.avatarUrl} alt="An avatar of the author" />
-          <div className='test-text'>
-            <h3>{item.author}</h3>
-            <p>{item.jobRole}</p>
-          </div>
-        </div>
+        <img src={avatarUrl} alt={`${author}'s avatar`} className="avatar" />
+        <h3>{author}</h3>
+        <p className="job-role">{jobRole}</p>
+      </div>
+      
     </div>
-  )
-}
+  );
+};
 
-export default Review
+export default Review;

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import TwoPhones from '../assets/images/images/two-phones.svg';
 
 

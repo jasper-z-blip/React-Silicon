@@ -953,8 +953,10 @@ footer .container {
 
   /* SECTION-5 */
   #clients {
+    max-width: 1200px;
     display: block;
     display: flex;
+    justify-content: center;
     flex-direction: row;
     background-color: var(--color-grey100);
     padding: 2rem 2rem;
@@ -967,47 +969,32 @@ footer .container {
     margin: 2rem 14rem 0rem 8rem;
   }
 
-  .reviews {
+  .testimonials {
     display: flex;
-    flex-direction: row;
   }
-  
-  .review-1, .review-2 {
-    height: 20rem;
-    width: 20rem;
-    background-color: var(--color-white);
-    margin: 2rem 2rem 2rem 0;
-    border-radius: 8px;
+
+  .review {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    padding-left: 1.5rem;
-    padding-right: 1rem;
-
-    p {
-      margin-top: 1rem;
-    }
+    margin-right: 1rem;
+    margin-top: 2rem;
+    padding: 1rem;
   }
 
-  .img-name-1, .img-name-2 {
-    display: flex;
-    align-items: center;
-    margin-top: 1rem;
+  .quote {
+    margin-top: -2.5rem;
   }
 
-  .test-text {
-    padding: 1rem 2rem 2rem 1rem;
-
-    h3 {
-      margin-bottom: -.5rem;
-    }
+  .star-rating {
+    padding-bottom: .5rem;
   }
 
-  .citattecken-1, .citattecken-2 {
-    margin-top: -2rem;
+  .avatar {
+    padding-top: .5rem;
   }
 
   /* SECTION-6 */
   #questions .section-6 {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: auto 2fr;
