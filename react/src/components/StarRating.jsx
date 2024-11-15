@@ -2,9 +2,9 @@ import React from 'react'
 import FullStar from '../assets/images/images/full-star.svg';
 import EmptyStar from '../assets/images/images/empty-star.svg';
 
-const StarRating = (starRating) => {
+const StarRating = ({starRating}) => {
   const maxStars = 5;
-  const filledStars = Math.min(starRating, maxStars)
+  const filledStars = Math.min(Math.max (starRating, 0), maxStars);
   const emptyStars = maxStars -filledStars;
   return (
     <div className='star-rating'>

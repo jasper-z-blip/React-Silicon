@@ -1,6 +1,5 @@
 import React from 'react';
-import AppStore from '../assets/images/images/App-Store.svg';
-import GooglePlay from '../assets/images/images/Google-Play.svg';
+
 import TwoPhones from '../assets/images/images/two-phones.svg';
 
 
@@ -19,9 +18,20 @@ const Main = () => {
             </p>
 
             <div className="buttons">
-              <a className="btn-app" href="#"><img src={AppStore} alt="App-store button" /></a>
-              <a className="btn-app" href="#"><img src={GooglePlay} alt="Google-play button" /></a>
+              <div className='app-store-btn'>
+                <p className='download'>Download on the</p>
+                <a className="a-app-store" href="https://play.google.com/" target="_blank" rel="noopener noreferrer">
+                  App Store
+                </a>
+              </div>
+
+              <div>
+                <a className="google-button" href="https://play.google.com/" target="_blank" rel="noopener noreferrer">
+                  Google Play
+                </a>
+              </div>
             </div>
+
 
             <div className="all-discover">
               <a href="#" className="discover-more">

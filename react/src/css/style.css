@@ -230,6 +230,18 @@ a:hover {
   margin-bottom: 2rem;
 }
 
+.google-button, .app-store-btn {
+  width: 16rem;
+  background-color: var(--color-grey900);
+  color: var(--color-white);
+  padding: .5rem 1rem .5rem 1rem;
+
+}
+
+.download {
+  font-size: 2px;
+}
+
 #hero .disc-more {
   color: var(--color-chevron);
   font-size: 0.9rem;
@@ -747,7 +759,7 @@ footer .container {
   .faq-item {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     border: none;
-    background-color: var(--color-grey200);
+    background-color: var(--color-grey100);
   }
 
   /* SECTION-7 */

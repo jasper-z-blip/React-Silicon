@@ -236,6 +236,10 @@ body {
     font-weight: bold;
     text-align: left;
   }
+
+  h2 {
+    text-align: center;
+  }
 }
 
 .name-input, .email-input, .spec-input {

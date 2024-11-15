@@ -5,7 +5,7 @@ const Clients = () => {
   const [reviews, setReviews] = useState([])
 
   const getReviews = async () => {
-    const res = await fetch('http://win24-assignment.azurewebsites.net/api/testimonials')
+    const res = await fetch('https://win24-assignment.azurewebsites.net/api/testimonials')
     const data = await res.json()
     setReviews(data)
   }
