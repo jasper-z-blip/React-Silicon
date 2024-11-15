@@ -68,6 +68,7 @@ header .container {
 }
 
 header {
+  max-width: 100%;
   background-color: var(--color-white);
 }
 
@@ -457,7 +458,7 @@ h2 {
   align-items: center;
   text-align: left;
   font-size: .7rem;
-  border: 2px solid var(--color-grey200);
+  border: 2px solid var(--color-grey300);
   padding-left: 1rem;
   padding-right: 2rem;
   margin-top: 1rem;
@@ -671,6 +672,7 @@ footer .container {
   #hero .images {
     display: block;
     transform: scale(0.7);
+    max-width: 100%;
   }
   #hero .container {
     grid-template-columns: 1fr auto;
@@ -738,9 +740,14 @@ footer .container {
     height: fit-content;
   }
   /* SECTION 6 */
+  .faq-list {
+    max-width: 1200px;
+    margin-left: 7.5rem;
+  }
   .faq-item {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     border: none;
+    background-color: var(--color-grey200);
   }
 
   /* SECTION-7 */
