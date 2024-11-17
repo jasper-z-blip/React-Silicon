@@ -61,6 +61,7 @@ const Subscribe = () => {
 
           <form onSubmit={handleSubscribe}>
             <div className="input-box">
+              <i className="fa-regular fa-envelope"></i>
               <input 
                 className="mail-box" 
                 type="email" 
