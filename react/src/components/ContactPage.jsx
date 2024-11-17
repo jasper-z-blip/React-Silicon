@@ -166,9 +166,9 @@ const ConsultationForm = () => {
         setSubmitted(true);
         reset();
       }
-    } catch (error) {
+    } catch (error) {//Hjälp chatGPT
       console.error("Error submitting form: ", error);
-      alert("The form could not be submitted. Please try again later.");//Hjälp chatGPT
+      alert("The form could not be submitted. Please try again later.");
     }
   };
 

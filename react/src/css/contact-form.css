@@ -260,7 +260,7 @@ body {
 
 @media (min-width: 1400px) {
 
-    /* CONTACT-INFO */
+  /* CONTACT-INFO */
   .contact-info {
     background-color: var(--color-grey100);
     padding-bottom: 4rem;
@@ -379,10 +379,6 @@ body {
     max-height: 700px;
   }
 
-  .map i {
-    
-  }
-
   .location-icon {
     position: absolute;
     z-index: 2;
@@ -451,7 +447,7 @@ body {
     font-size: 24px;
   }
 
-    /* Floating box */
+  /* Floating box */
   .floating-box {
     width: 580px;
     height: 700px;

@@ -27,7 +27,6 @@ const Questions = () => {
 
   return (
     <div className="faq-page">
-      {/* Heading och Subheading */}
       <div className="faq-header">
         <h1 className="faq-heading">Any questions?<br/> Check out the FAQs</h1>
         <p className="faq-subheading">
@@ -53,7 +52,7 @@ const Questions = () => {
 
       {/* FAQ Cards */}
       <div className="faq-cards">
-        {/* Phone Contact */}
+
         <div className="faq-card">
           <img src={BluePhone} alt="Blue phone." className="faq-icon" />
           <p className="faq-title">Still have questions?</p>
@@ -62,7 +61,6 @@ const Questions = () => {
           </a>
         </div>
 
-        {/* Chat Contact */}
         <div className="faq-card">
           <img src={GreenBubble} alt="Green speak-bubble." className="faq-icon" />
           <p className="faq-title">Don't like phone calls?</p>

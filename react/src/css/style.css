@@ -700,6 +700,7 @@ footer .container {
     justify-content: center;
     align-items: center;
   }
+
   /* SECTION-2 */
   #app-features {
     padding-bottom: 1rem;
@@ -710,6 +711,7 @@ footer .container {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "text text" "container-1 container-2";
   }
+
   /* SECTION-3 */
   #how-does-it-work {
     position: relative;
@@ -728,13 +730,14 @@ footer .container {
     height: -moz-fit-content;
     height: fit-content;
   }
+
   /* SECTION 6 */
   .faq-page {
     max-width: 1400px;
   }
 
   .faq-heading, .faq-subheading {
-    text-align: left;
+    text-align: center;
     margin-left: 6rem;
   }
 
@@ -781,6 +784,7 @@ footer .container {
   .box-7 {
     padding-top: 1rem;
   }
+
   /* Footer */
   footer .container {
     display: flex;
@@ -817,6 +821,7 @@ footer .container {
   .btn-1 i {
     margin-right: 8px;
   }
+
   /* MAIN */
   #hero .container {
     max-width: 1300px;
@@ -850,6 +855,7 @@ footer .container {
     justify-content: center;
     align-items: center;
   }
+
   /* SECTION-2 */
   #app-features .mobile-app {
     display: block;
@@ -1016,10 +1022,15 @@ footer .container {
       "faq-cards faq-questions";
   }
 
+  .faq-heading, .faq-subheading {
+    text-align: left;
+  }
+
   .faq-cards {
     margin-top: -18rem;
     margin-bottom: 5rem;
-    margin-left: 2rem;
+    margin-left: 4rem;
+    justify-content: left;
   }
 
   .faq-title {

@@ -39,7 +39,7 @@ const Clients = () => {
               />
             ))
           ) : (
-            <p>Loading reviews...</p>
+            <p>Loading reviews...</p>//Förslag från chatGPt, hade tanke att implementera att det skulle laddas men hann ej.
           )}
         </div>
       </div>
