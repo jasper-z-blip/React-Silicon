@@ -33,45 +33,11 @@ body {
 .contact-info {
   background-color: var(--color-grey100);
 }
+
 .contact-container-2 {
-  width: 90vw;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  display: none;
 }
 
-.link-box {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-
-  .nav-bar-2 {
-    color: var(--color-grey600);
-  }
-  .nav-link-2 {
-    color: var(--color-grey600);
-    text-decoration: none;
-  }
-  .nav-link-3 {
-    color: var(--color-primary);
-    text-decoration: none;
-  }
-  .nav-link-2:hover {
-    color: var(--color-purple);
-    text-decoration: underline;
-  }
-  .nav-link-3:hover {
-    color: var(--color-purple);
-    text-decoration: underline;
-  }
-}
 .info-card {
   display: flex;
   align-items: center;
@@ -270,9 +236,10 @@ body {
 .contact-box {
   text-align: center;
   border-radius: 5px;
-
-  background-color: var(--color-grey800);
+  border: 2px solid var(--color-grey800);
+  background-color: var(--color-grey200);
   padding: 1rem;
+  margin: 1rem;
 
   h1 {
     font-size: 40px;
@@ -296,15 +263,44 @@ body {
     /* CONTACT-INFO */
   .contact-info {
     background-color: var(--color-grey100);
+    padding-bottom: 4rem;
   }
 
   .contact-container-2 {
+    display: block;
     max-width: 1200px;
     display: grid;
     justify-content: left;
     text-align: left;
     gap: 3rem;
     margin-left: 10rem;
+  }
+
+  .link-box {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  
+    .nav-bar-2 {
+      color: var(--color-grey600);
+    }
+    .nav-link-2 {
+      color: var(--color-grey600);
+      text-decoration: none;
+    }
+    .nav-link-3 {
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+    .nav-link-2:hover {
+      color: var(--color-purple);
+      text-decoration: underline;
+    }
+    .nav-link-3:hover {
+      color: var(--color-purple);
+      text-decoration: underline;
+    }
   }
 
   .info-card {
@@ -362,7 +358,7 @@ body {
     max-width: 1200px;
     margin-left: 6rem;
     margin-right: 5rem;
-    margin-top: 7rem;
+    margin-top: 8rem;
     padding-bottom: 3rem;
     display: grid;
     grid-template-columns: auto auto;
@@ -381,6 +377,10 @@ body {
   .img-map {
     max-width: 560px;
     max-height: 700px;
+  }
+
+  .map i {
+    
   }
 
   .location-icon {

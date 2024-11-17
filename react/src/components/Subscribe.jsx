@@ -11,7 +11,7 @@ const Subscribe = () => {
   const handleSubscribe = (event) => {
     event.preventDefault();
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
     if (email === '') {
       setError('Please enter your email address.');
@@ -21,7 +21,7 @@ const Subscribe = () => {
       setError('Please enter a valid email address.');
       setIsSubscribed(false);
       return;
-    }
+    }else (email)
 
     setIsLoading(true);
     setError('');

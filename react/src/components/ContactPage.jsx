@@ -110,9 +110,15 @@ const MedicalCenter = ({ name, address, phone, hours }) => {
     <div className="medical-center">
       <h2>{name}</h2>
       <div className="location">
+      <a
+        href="https://www.google.com/maps/search/4517+Washington+Ave.+Manchester,+Kentucky+39495/@37.1536371,-83.7644756,17z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTExMy4xIKXMDSoASAFQAw%3D%3D"
+        rel="noopener noreferrer"
+        target="_blank">
         <i className="fa-solid fa-location-dot"></i>
+      </a>
         <p>{address}</p>
       </div>
+      
       <div className="phone">
         <i className="fa-solid fa-phone fa-shake"></i>
         <p>{phone}</p>
@@ -162,7 +168,7 @@ const ConsultationForm = () => {
       }
     } catch (error) {
       console.error("Error submitting form: ", error);
-      alert("The form could not be submitted. Please try again later.");
+      alert("The form could not be submitted. Please try again later.");//Hjälp chatGPT
     }
   };
 
