@@ -181,18 +181,31 @@ const ConsultationForm = () => {
       <div className="floating-box">
         <h2>Get online consultation</h2>
         <p className='enter-paragraph'>Full name</p>
-        <input className='name-input'
-          type="text" 
-          placeholder="Full name" 
-          {...register('name', { required: 'This field is required.' })} 
-        />
-        {errors.name && <p className="error-message">{errors.name.message}</p>}
-        
+        <input
+        className="name-input"
+        type="text"
+        placeholder="Full name"
+        {...register('name', {
+          required: 'This field is required.',
+          pattern: {
+            value: /^[a-zA-ZÀ-ÿ]{2,}(?:[´-]?[a-zA-ZÀ-ÿ]+)*(?: [a-zA-ZÀ-ÿ]{2,}(?:[´-]?[a-zA-ZÀ-ÿ]+)*)+$/,
+            message: 'Please enter at least a first name and a last name with a minimum of 2 characters each.'
+          }
+        })}
+      />
+      {errors.name && <p className="error-message">{errors.name.message}</p>}
+
         <p className='enter-paragraph'>E-mail</p>
         <input className='email-input' 
           type="email" 
           placeholder="E-mail" 
-          {...register('email', { required: 'This field is required.' })} 
+          {...register('email', { 
+            required: 'This field is required.',
+            pattern: {
+              value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+              message: 'Please enter a valid email address. Example of valid email adress: jasper@domain.se'
+            }
+          })} 
         />
         {errors.email && <p className="error-message">{errors.email.message}</p>}
         
@@ -200,7 +213,17 @@ const ConsultationForm = () => {
         <input className='spec-input'
           type="text" 
           placeholder="Specialist" 
-          {...register('specialist', { required: 'This field is required.' })} 
+          {...register('specialist', { required: 'This field is required.',
+            required: 'This field is required.',
+            pattern: {
+              value: /^[a-zA-Z\s]*$/,
+              message: 'Only letters and spaces are allowed.'
+            },
+            minLength: {
+              value: 2,
+              message: 'The name must be at least 2 characters long.'
+            }
+           })} 
         />
         {errors.specialist && <p className="error-message">{errors.specialist.message}</p>}
         
