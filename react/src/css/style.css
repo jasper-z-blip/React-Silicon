@@ -733,6 +733,11 @@ footer .container {
     max-width: 1400px;
   }
 
+  .faq-heading, .faq-subheading {
+    text-align: left;
+    margin-left: 6rem;
+  }
+
   .faq-cards {
     display: flex;
     justify-content: center;
@@ -752,6 +757,10 @@ footer .container {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     border: none;
     background-color: var(--color-grey100);
+  }
+
+  .faq-link {
+    color: var(--color-primary);
   }
 
   /* SECTION-7 */
@@ -1010,6 +1019,7 @@ footer .container {
   .faq-cards {
     margin-top: -18rem;
     margin-bottom: 5rem;
+    margin-left: 2rem;
   }
 
   .faq-title {
